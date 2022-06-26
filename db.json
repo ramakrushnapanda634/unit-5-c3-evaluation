@@ -48,6 +48,38 @@
       "votes": 0,
       "party": "republicans",
       "age": 15
+    },
+    {
+      "id": 11,
+      "name": "Donald...",
+      "role": "candidate",
+      "votes": 0,
+      "party": "republicans",
+      "age": 15
+    },
+    {
+      "name": "Obama Doenn",
+      "role": "voter",
+      "username": "obama",
+      "password": "1234",
+      "age": 20,
+      "token": 0.873132604494884
+    },
+    {
+      "id": 20,
+      "name": "John Doe",
+      "role": "voter",
+      "username": "john",
+      "password": "1234",
+      "age": 25
+    },
+    {
+      "id": 23,
+      "name": "John Doe",
+      "role": "voter",
+      "username": "john",
+      "password": "1234",
+      "age": 25
     }
   ]
 }

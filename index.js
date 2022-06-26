@@ -81,10 +81,26 @@ app.post("/votes/vote/:user", (req, res) => {
     });
   });
 });
-
-
-
+app.get("/votes/count/:user", (req, res) => {
+  fs.readFile("./db.json", "utf-8", (err, data) => {
+    const parsed = JSON.parse(data);
+    parsed.users = parsed.users.filter((el) => el.role === "candidate");
+    res.send(JSON.stringify(parsed.users));
+  });
+});
 app.get("/db", (req, res) => {
+  fs.readFile("./db.json", "utf-8", (err, data) => {
+    const parsed = JSON.parse(data);
+    const users = parsed.users;
+
+   
+      res.send(JSON.stringify(users));
+    });
+  });
+
+
+
+app.post("/db", (req, res) => {
   fs.readFile("./db.json", "utf-8", (err, data) => {
     const parsed = JSON.parse(data);
     parsed.users = [...parsed.users, req.body];
@@ -95,10 +111,12 @@ app.get("/db", (req, res) => {
   });
 });
 
-app.post("/db", (req, res) => {
-  fs.readFile("./db.json", "utf-8", (err, data));
+// app.post("/db", (req, res) => {
+//   fs.readFile("./db.json", "utf-8", (err, data));
 
 
-});
+// });
 const PORT = process.env.PORT || 8080;
-app.listen(PORT);
+app.listen(PORT,()=>{
+  console.log("listening on port " );
+});
