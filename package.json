@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- 
   "scripts": {
-    "dev": "nodemon index.js",
     "start": "node index.js"
   },
   "repository": {
@@ -21,7 +19,6 @@
   "homepage": "https://github.com/ramakrushnapanda634/unit-5-c3-evaluation#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "nodemon": "^2.0.16",
-    "uuid": "^8.3.2"
+    "nodemon": "^2.0.18"
   }
 }
