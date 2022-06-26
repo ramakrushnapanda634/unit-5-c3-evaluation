@@ -82,15 +82,7 @@ app.post("/votes/vote/:user", (req, res) => {
   });
 });
 
-// app.get("/votes/count/:user", (req, res) => {
-//   const { user } = req.params;
-//   fs.readFile("./db.json", "utf-8", (err, data) => {
-//     const parsed = JSON.parse(data);
-//     parsed.users = parsed.users.map((el) =>
-//       el.name == user ? res.send(el.votes) : el
-//     );
-//   });
-// });
+
 
 app.get("/db", (req, res) => {
   fs.readFile("./db.json", "utf-8", (err, data) => {
