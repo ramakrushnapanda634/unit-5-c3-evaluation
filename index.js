@@ -106,6 +106,7 @@ app.get("/db", (req, res) => {
 app.post("/db", (req, res) => {
   fs.readFile("./db.json", "utf-8", (err, data));
 
-const PORT=process.env.PORT ||8080
+
 });
+const PORT = process.env.PORT || 8080;
 app.listen(PORT);
